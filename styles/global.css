@@ -72,6 +72,22 @@ img {
   text-align: center;
 }
 
+#app {
+  width: min(100%, 20.5rem);
+  margin-inline: auto;
+  margin-top: 2.875rem;
+
+  display: grid;
+  grid-template-areas: 
+    "header"
+    "main"
+    "questions";
+}
+
+ul {
+  list-style: none;
+}
+
 @media screen and (width >= 1024px) {
   .logo {
     text-align: left;

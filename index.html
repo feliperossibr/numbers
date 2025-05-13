@@ -21,6 +21,66 @@
       <span class="overline">Online - gratuito</span>
       <h1>Sorteador de números</h1>
     </header>
+
+    <main class="main">
+      <div id="mainDraw">
+        <h2>Quero sortear:</h2>
+        <p>Defina o intervalo e a quantidade de números, clique em "Sortear" e veja os resultados na tela. É rápido e fácil!</p>
+
+        <form id="form">
+          <div class="fields-wrapper">
+            <div class="input-wrapper">
+              <div class="input-group">
+                <label for="numbers">Números</label>
+                <div class="gradient-border">
+                  <input type="text" name="numbers" id="numbers" placeholder="2" minlength="1" maxlength="3" required>
+                </div>
+              </div>
+
+              <div class="input-group">
+                <label for="start">De</label>
+                <div class="gradient-border">
+                  <input type="text" name="starts" id="starts" placeholder="1" minlength="1" maxlength="3" required>
+                </div>
+              </div>
+
+              <div class="input-group">
+                <label for="end">Até</label>
+                <div class="gradient-border">
+                  <input type="text" name="end" id="end" placeholder="100" minlength="1" maxlength="3" required>
+                </div>
+              </div>
+            </div>
+
+            <div class="switch-wrapper">
+              <input type="checkbox" name="repeatNumber" id="repeatNumber">
+              <label for="repeatNumber">Não repetir número</label>
+            </div>
+          </div>
+
+          <div class="btn-wrapper">
+            <button class="btn" type="submit" aria-label="Sortear">
+              Sortear
+              <img src="assets/icons/arrow-right.svg" alt="">
+            </button>
+          </div>
+        </form>
+      </div>
+
+      <div id="mainResults" class="hidden">
+        <h2 class="txt-center" mg-top>Resultado do sorteio</h2>
+        <span id="numbersResults">1º resultado</span>
+
+        <ul id="results" role="list"></ul>
+
+        <div id="btnAgain" class="btn-wrapper">
+          <button class="btn" type="button" aria-label="Sortear novamente">
+            Sortear novamente
+            <img src="assets/icons/again.svg" alt="">
+          </button>
+        </div>
+      </div>
+    </main>
   </div>
 </body>
 </html>
