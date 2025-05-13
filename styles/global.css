@@ -36,9 +36,60 @@
   --display-md: 800 2.5rem/1.3 var(--ff-special);
   --display-sm: 700 2rem/1.3 var(--ff-special);
   --overline: 700 1.5rem/1.5 "Roboto Mono", sans-serif;
-  -p-lg: 500 1rem/1.5 var(--ff-base);
-  -p-md: 500 .875rem/1.5 var(--ff-base);
-  -p-sm: 500 .75rem/1.5 var(--ff-base);
+  --p-lg: 500 1rem/1.5 var(--ff-base);
+  --p-md: 500 .875rem/1.5 var(--ff-base);
+  --p-sm: 500 .75rem/1.5 var(--ff-base);
   --label-md: 700 1.25rem/1.5 var(--ff-base);
   --label-sm: 700 1rem/1.5 var(--ff-base);
+}
+
+::selection {
+  background: var(--content-brand);
+  color: var(--content-primary);
+}
+
+html, body {
+  width: 100%;
+  height: auto;
+  min-height: 100vh;
+
+  background: var(--bg-primary) url(../assets/img/bg.png) top;
+  color: var(--content-primary);
+  font: var(--p-lg);
+}
+
+body {
+  padding: 2.75rem 2rem;
+}
+
+img {
+  vertical-align: top;
+}
+
+.logo {
+  max-width: 70rem;
+  margin-inline: auto;
+  text-align: center;
+}
+
+@media screen and (width >= 1024px) {
+  .logo {
+    text-align: left;
+  }
+
+  #app {
+    width: min(100%, 70rem);
+    grid-template-columns: 32rem auto;
+    grid-template-areas: 
+      "header main"
+      "questions main";
+    column-gap: 6.75rem;
+    margin-top: 4rem;
+  }
+}
+
+@media screen and (width >= 1300px) {
+  .logo img {
+    transform: translateX(-1rem);
+  }
 }
