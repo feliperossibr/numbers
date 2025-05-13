@@ -4,7 +4,7 @@ const main = document.querySelector(".main");
 const mainDraw = document.querySelector("#mainDraw");
 const mainResults = document.querySelector("#mainResults");
 const results = document.querySelector("#results");
-const btnAgain = document.querySelector("btnAgain");
+const btnAgain = document.querySelector("#btnAgain");
 
 const numberResults = document.querySelector("#numberResults");
 let resultsQuantity = 2;
@@ -23,7 +23,7 @@ let numberList = [];
   })
 });
 
-class NumberDrawer {
+class numberDrawer {
   constructor(numbers, starts, end) {
     const error = this.validate(numbers, starts, end);
     if(error) throw new Error(error);
