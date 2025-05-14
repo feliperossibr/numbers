@@ -15,7 +15,7 @@ const startsEl = document.querySelector("#starts");
 const endEl = document.querySelector("#end");
 const repeatNumberEl = document.querySelector("#repeatNumber");
 
-let numberList = [];
+let numbersList = [];
 
 [numbersEl, startsEl, endEl].forEach((input) => {
   input.addEventListener("input", () => {
@@ -23,7 +23,7 @@ let numberList = [];
   })
 });
 
-class numberDrawer {
+class NumberDrawer {
   constructor(numbers, starts, end) {
     const error = this.validate(numbers, starts, end);
     if(error) throw new Error(error);
@@ -114,7 +114,7 @@ formEl.addEventListener("submit", (event) => {
   event.preventDefault();
 
   try {
-    const NumberDrawer = new NumberDrawer(
+    const numberDrawer = new NumberDrawer(
       numbersEl.value,
       startsEl.value,
       endEl.value,
